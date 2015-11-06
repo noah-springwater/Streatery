@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  foodtruck_id: 
+
+two:
+  body: MyText
+  foodtruck_id: 

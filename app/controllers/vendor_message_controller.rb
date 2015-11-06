@@ -1,3 +1,0 @@
-class VendorMessageController < ApplicationController
-
-end
