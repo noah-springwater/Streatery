@@ -1,0 +1,19 @@
+<h3>Create New Truck</h3>
+<div class="container">
+
+<%= form_for @vendor do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br>
+  <br>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+  <br>
+  <br>
+  <%= f.label :password_confirmation %>
+  <%= f.text_field :password_confirmation %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>
+</div>
