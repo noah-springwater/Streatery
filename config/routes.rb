@@ -1,45 +1,11 @@
 Rails.application.routes.draw do
+  resources :reviews, only: [:new, :create, :show, :index]
+  resources :messages, only: [:new, :create, :show, :index]
+  resources :foodtrucks
+  resources :users
 
-
-  get 'reviews/new'
-
-  get 'reviews/create'
-
-  get 'reviews/show'
-
-  get 'reviews/index'
-
-  get 'messages/new'
-
-  get 'messages/create'
-
-  get 'messages/show'
-
-  get 'messages/index'
-
-  get 'foodtrucks/new'
-
-  get 'foodtrucks/create'
-
-  get 'foodtrucks/show'
-
-  get 'foodtrucks/index'
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/show'
-
-  get 'users/index'
-
-  get '/vendors/profile' => 'vendors#profile', as: :profile
-  get '/vendors/log_in' => 'vendors#log_in', as: :log_in
-  resources :vendors, only: [:new, :create]
 
   # resources :sessions, only: [:create, :destroy]
-  post '/sessions' => 'sessions#create'
-  delete '/sessions' => 'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

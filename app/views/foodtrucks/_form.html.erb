@@ -1,0 +1,27 @@
+<%= form_for(@foodtruck) do |f| %>
+
+  <p>
+    <%= f.label :name, "Streatery Name" %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :img_url, "Image" %>
+    <%= f.text_field :img_url %>
+  </p>
+  <p>
+    <%= f.label :cuisine, "Cuisine" %>
+    <%= f.text_field :cuisine %>
+  </p>
+  <p>
+    <%= f.label :card, "Accept Cards" %>
+    <%= f.text_field :card %>
+  </p>
+  <p>
+    <%= f.label :menu, "Menu" %>
+    <%= f.text_field :menu %>
+  </p>
+  <p>
+    <%= f.submit 'New Streatery' %>
+  </p>
+
+  <% end %>

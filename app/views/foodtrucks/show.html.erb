@@ -1,2 +1,10 @@
-<h1>Foodtrucks#show</h1>
-<p>Find me in app/views/foodtrucks/show.html.erb</p>
+<h1><%= @foodtruck.name %></h1>
+<div>
+
+<img src="<%= @foodtruck.img_url %>">
+<br>
+<a href="/foodtrucks">See All Steateries</a>
+<br>
+<%= link_to "Edit Foodtruck", edit_foodtruck_path(@foodtruck) %>
+
+</div>
