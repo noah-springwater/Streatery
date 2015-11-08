@@ -27,4 +27,5 @@
   <p>OR</p>
 
 <% end %>
+<%= render partial: 'messages/form' %>
 <%= button_to 'Delete Truck', "/foodtrucks/#{@foodtruck.id}", method: "delete", class: "btn btn-danger" %>

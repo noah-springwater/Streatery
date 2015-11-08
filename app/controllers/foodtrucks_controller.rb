@@ -24,6 +24,7 @@ class FoodtrucksController < ApplicationController
 
   def edit
     @foodtruck = Foodtruck.find(params[:id])
+    @message = Message.find_by(foodtruck: params[:id])
 
   end
 

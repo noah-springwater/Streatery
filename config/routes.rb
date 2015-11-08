@@ -6,13 +6,15 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  get '/' => 'users#log_in'#creates log in as home page
+
   get 'users/profile' => 'users#profile', as: :profile
   get 'users/log_in' => 'users#log_in', as: :log_in
   resources :users, only: [:new, :create]
 
   resources :sessions, only: [:create, :destroy]
   post '/sessions' => 'sessions#create'
-  post '/sessions' => 'sessions#destroy'
+  delete '/sessions' => 'sessions#destroy'
   #log in, log out
 
 
