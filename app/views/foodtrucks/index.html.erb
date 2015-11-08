@@ -1,21 +1,26 @@
-<h1>Welcome to Streatery</h1>
- <% @foodtrucks.each do |foodtruck| %>
+<%= stylesheet_link_tag "foodtrucks.scss" %>
+<h1 class="text-center">s  t  r  [ e a t ]  e  r  y</h1>
 
-  <div>
-  <h2><a href="/foodtrucks/<%= foodtruck.id %>"><%= foodtruck.name %></a></h2>
+<div class="container-fluid">
 
-      <img src="<%= foodtruck.img_url %>" width="300", height="200">
-      <p>Cuisine: <%= foodtruck.cuisine %></p>
-      <p>Accepts Cards: <%= foodtruck.card %></p>
-      <p>Menu: <%= foodtruck.menu %></p>
+  <div class="row">
+    <% @foodtrucks.each do |foodtruck| %>
+    <div class="col-md-4">
+
+    <h2 class="text-center"><a href="/foodtrucks/<%= foodtruck.id %>"><%= foodtruck.name %></a></h2>
+      <img src="<%= foodtruck.img_url %>", width="300", height="200", class="center-block">
+      <p class="text-center">Cuisine: <%= foodtruck.cuisine %></p>
+      <p class="text-center">Accepts Cards: <%= foodtruck.card %></p>
+      <p class="text-center">Menu: <%= foodtruck.menu %></p>
+    <br>
+    <br>
+
+    </div>
+    <% end %>
   </div>
-  <br>
-  <br>
-<% end %>
-
-<br>
-<br>
-<br>
+</div>
 
 
-<%= button_to 'Make New Streatery', "/foodtrucks/new", method: "get" %>
+
+
+<%= button_to 'CREATE NEW STREATERY', "/foodtrucks/new", method: "get", class: 'btn btn-info btn-block' %>

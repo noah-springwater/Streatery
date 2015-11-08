@@ -1,32 +1,35 @@
 <h1><%= @foodtruck.name %></h1>
 
-<div>
-<img src="<%= @foodtruck.img_url %>">
-</div>
+  <div>
+    <img src="<%= @foodtruck.img_url %>">
+  </div>
 
 
-<%= render partial: 'messages/form' %>
+  <%= render partial: 'messages/form' %>
 
 <h3>Messages (<%= @foodtruck.messages.size %>)</h3>
-<% @foodtruck.messages.each do |message| %>
-  <p><%= message.body %></p>
-<% end %>
+  <% @foodtruck.messages.each do |message| %>
+    <p><%= message.body %></p>
+  <% end %>
 
 <br>
 <br>
 
-<%= render partial: 'reviews/form' %>
+  <%= render partial: 'reviews/form' %>
 
 <h3>Reviews (<%= @foodtruck.reviews.size %>)</h3>
-<% @foodtruck.reviews.each do |review| %>
-  <p><%= review.author %></p>
-  <p><%= review.rating %></p>
-  <p><%= review.message %></p>
-<% end %>
+  <% @foodtruck.reviews.each do |review| %>
+    <p><%= review.author %></p>
+    <p><%= review.rating %></p>
+    <p><%= review.message %></p>
+  <% end %>
+
 <br>
 <br>
 
-<a href="/foodtrucks">See All Steateries</a>
+    <h3><a href="/foodtrucks">view complete list</a></h3>
+
+
 <br>
 <br>
-<%= link_to "Edit Foodtruck", edit_foodtruck_path(@foodtruck) %>
+    <h3><%= link_to "edit streatery", edit_foodtruck_path(@foodtruck) %></h3>
