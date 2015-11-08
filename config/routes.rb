@@ -5,7 +5,15 @@ Rails.application.routes.draw do
     resources :messages
     resources :reviews
   end
-  resources :users
+
+  get 'users/profile' => 'users#profile', as: :profile
+  get 'users/log_in' => 'users#log_in', as: :log_in
+  resources :users, only: [:new, :create]
+
+  resources :sessions, only: [:create, :destroy]
+  post '/sessions' => 'sessions#create'
+  post '/sessions' => 'sessions#destroy'
+  #log in, log out
 
 
   # resources :sessions, only: [:create, :destroy]

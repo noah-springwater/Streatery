@@ -1,4 +1,4 @@
-<%= stylesheet_link_tag "foodtrucks.scss" %>
+
 <h1 class="text-center">s  t  r  [ e a t ]  e  r  y</h1>
 
 <div class="container-fluid">
@@ -8,7 +8,7 @@
     <div class="col-md-4">
 
     <h2 class="text-center"><a href="/foodtrucks/<%= foodtruck.id %>"><%= foodtruck.name %></a></h2>
-      <img src="<%= foodtruck.img_url %>", width="300", height="200", class="center-block">
+      <img src="<%= foodtruck.img_url %>", width="300", height="200", class="center-block img-rounded">
       <p class="text-center">Cuisine: <%= foodtruck.cuisine %></p>
       <p class="text-center">Accepts Cards: <%= foodtruck.card %></p>
       <p class="text-center">Menu: <%= foodtruck.menu %></p>
