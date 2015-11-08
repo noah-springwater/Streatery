@@ -1,10 +1,20 @@
 <h1><%= @foodtruck.name %></h1>
-<div>
 
+<div>
 <img src="<%= @foodtruck.img_url %>">
+</div>
+
+
+<%= render partial: 'messages/form' %>
+
+<h3>Messages (<%= @foodtruck.messages.size %>)</h3>
+<% @foodtruck.messages.each do |message| %>
+  <p><%= message.body %></p>
+<% end %>
+
+<br>
 <br>
 <a href="/foodtrucks">See All Steateries</a>
 <br>
+<br>
 <%= link_to "Edit Foodtruck", edit_foodtruck_path(@foodtruck) %>
-
-</div>

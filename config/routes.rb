@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :reviews, only: [:new, :create, :show, :index]
   resources :messages, only: [:new, :create, :show, :index]
-  resources :foodtrucks
+  resources :foodtrucks do
+    resources :messages
+  end
   resources :users
 
 

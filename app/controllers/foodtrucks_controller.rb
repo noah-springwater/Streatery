@@ -6,6 +6,8 @@ class FoodtrucksController < ApplicationController
 
   def show
     @foodtruck = Foodtruck.find(params[:id])
+    @message = Message.new
+    @message.foodtruck_id = @foodtruck.id
   end
 
   def new
@@ -20,13 +22,16 @@ class FoodtrucksController < ApplicationController
 
   def edit
     @foodtruck = Foodtruck.find(params[:id])
+
   end
 
   def update
     @foodtruck = Foodtruck.find(params[:id])
     @foodtruck.update(foodtruck_params)
 
-    redirect_to foodtruck_path(@foodtruck)
+    redirect_to foodtrucks_path(@foodtruck)
+
+
   end
 
   def destroy

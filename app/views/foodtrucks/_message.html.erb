@@ -1,0 +1,6 @@
+<h3>Post to Message Board</h3>
+
+<p>Posted <%= distance_of_time_in_words(message.foodtruck.created_at, message.created_at) %>later</p>
+<div>
+  <p class="message"><%= message.body %></p>
+</div>

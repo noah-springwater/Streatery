@@ -4,13 +4,18 @@
   <div>
   <h2><a href="/foodtrucks/<%= foodtruck.id %>"><%= foodtruck.name %></a></h2>
 
- <img src="<%= foodtruck.img_url %>" alt="">
-  <p>Cuisine: <%= foodtruck.cuisine %></p>
-  <p>Card: <%= foodtruck.card %></p>
-  <p>Menu: <%= foodtruck.menu %></p>
-</div>
-
-
-<%= button_to 'Remove', "/foodtrucks/#{foodtruck.id}", method: "delete" %>
-
+      <img src="<%= foodtruck.img_url %>" width="300", height="200">
+      <p>Cuisine: <%= foodtruck.cuisine %></p>
+      <p>Accepts Cards: <%= foodtruck.card %></p>
+      <p>Menu: <%= foodtruck.menu %></p>
+  </div>
+  <br>
+  <br>
 <% end %>
+
+<br>
+<br>
+<br>
+
+
+<%= button_to 'Make New Streatery', "/foodtrucks/new", method: "get" %>

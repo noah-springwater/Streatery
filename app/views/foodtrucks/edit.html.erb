@@ -1,2 +1,30 @@
-<h3>New Streatery</h3>
-<%= render partial: 'form' %>
+<h1>Edit My Streatery</h1>
+
+<%= form_for @foodtruck do |f| %>
+
+  <%= f.label :name, "Streatery Name" %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :img_url, "Image or Logo" %>
+  <%= f.text_field :img_url %>
+  <br>
+  <br>
+  <%= f.label :cuisine %>
+  <%= f.text_field :cuisine %>
+  <br>
+  <br>
+  <%= f.label :card, "Accepts Cards" %>
+  <%= f.text_field :card %>
+  <br>
+  <br>
+  <%= f.label :menu, "Menu Favorites" %>
+  <%= f.text_field :menu %>
+  <br>
+  <br>
+  <%= f.submit 'Update' %>
+  <br>
+  <p>OR</p>
+
+<% end %>
+<%= button_to 'Delete Truck', "/foodtrucks/#{@foodtruck.id}", method: "delete" %>
