@@ -1,0 +1,22 @@
+<h3>Review Board</h3>
+
+<%= form_for [ @foodtruck, @review ] do |f| %>
+  <p>
+    <%= f.label :author %>
+    <br/>
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :rating %>
+    <br>
+    <%= f.text_field :rating %>
+  </p>
+  <p>
+    <%= f.label :message %>
+    <br/>
+    <%= f.text_area :message %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+<% end %>

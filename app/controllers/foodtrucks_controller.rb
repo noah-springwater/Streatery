@@ -8,6 +8,8 @@ class FoodtrucksController < ApplicationController
     @foodtruck = Foodtruck.find(params[:id])
     @message = Message.new
     @message.foodtruck_id = @foodtruck.id
+    @review = Review.new
+    @review.foodtruck_id = @foodtruck.id
   end
 
   def new
