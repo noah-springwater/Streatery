@@ -1,35 +1,51 @@
-<h1><%= @foodtruck.name %></h1>
 
-  <div>
-    <img src="<%= @foodtruck.img_url %>">
-  </div>
+<div class="text-center">
+
+  <h1 class="text-primary"><%= @foodtruck.name %></h1>
+
+</div>
 
 
-  
+    <img src="<%= @foodtruck.img_url %>", width="400", height="300", class="center-block img-rounded", >
 
-<h3>Messages (<%= @foodtruck.messages.size %>)</h3>
-  <% @foodtruck.messages.each do |message| %>
-    <p><%= message.body %></p>
-  <% end %>
+
+  <%= render partial: 'messages/form' %>
+<div class="text-center">
+
+        <% @foodtruck.messages.each do |message| %>
+        <p><%= message.body %></p>
+        <% end %>
+</div>
+
 
 <br>
 <br>
+<br>
+<br>
+
+
 
   <%= render partial: 'reviews/form' %>
 
-<h3>Reviews (<%= @foodtruck.reviews.size %>)</h3>
-  <% @foodtruck.reviews.each do |review| %>
-    <p><%= review.author %></p>
-    <p><%= review.rating %></p>
-    <p><%= review.message %></p>
-  <% end %>
+        <% @foodtruck.reviews.each do |review| %>
+        <p><%= review.author %></p>
+        <p><%= review.rating %></p>
+        <p><%= review.message %></p>
+        <% end %>
 
 <br>
 <br>
 
-    <h3><a href="/foodtrucks">view complete list</a></h3>
+<div id=buttons_view, class="text-center">
 
+    <button class="btn btn-default btn-lg" <h3><a href="/foodtrucks">View All</a></h3></button>
 
+</div>
+<br>
+<div id=button_edit, class="text-center">
+
+    <button class="btn btn-default btn-lg", <h3><%= link_to "Edit Streatery", edit_foodtruck_path(@foodtruck) %></h3></button>
+
+</div>
 <br>
 <br>
-    <h3><%= link_to "edit streatery", edit_foodtruck_path(@foodtruck) %></h3>

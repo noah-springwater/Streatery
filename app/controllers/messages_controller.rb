@@ -21,6 +21,7 @@ class MessagesController < ApplicationController
   def edit
     @message.id
   end
+  
   def index
   end
 end

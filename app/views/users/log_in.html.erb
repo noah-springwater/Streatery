@@ -1,11 +1,37 @@
-<h4>Please Log In...</h4>
 
-<%= form_tag '/sessions', method: :post do %>
-  <%= label_tag :username %>
-  <%= text_field_tag :username %>
-  <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  <%= submit_tag "Log In" %>
-<% end %>
+<h1 class="text-center text-info">s t r [ e a t ] e r y</h1>
 
-<%= button_to 'SIGN UP', "/users/new", method: "get", class: 'btn btn-info btn-block' %>
+<div class="text-center">
+  <br>
+  <br>
+
+  <div class="text-primary">
+
+    <%= form_tag '/sessions', method: :post do %>
+      <%= label_tag :username %>
+      <br>
+
+      <%= text_field_tag :username %>
+      <br>
+      <%= label_tag :password %>
+      <br>
+      <%= password_field_tag :password %>
+        <br>
+        <br>
+  </div>
+<div class="text-info">
+
+      <%= submit_tag "Log In" %>
+</div>
+
+    <% end %>
+        <br>
+        <br>
+
+
+</div>
+
+<div class="text-center text-info">
+
+<%= button_to 'Sign Up', "/users/new", method: "get", class: '' %>
+</div>

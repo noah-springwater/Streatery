@@ -1,31 +1,46 @@
-<h1>Edit My Streatery</h1>
+<div class="text-center text-info">
+  <h1>Edit Streatery</h1>
+</div>
+
+<div class="text-center text-primary">
 
 <%= form_for @foodtruck do |f| %>
 
   <%= f.label :name, "Streatery Name" %>
+  <br>
   <%= f.text_field :name %>
   <br>
   <br>
   <%= f.label :img_url, "Image or Logo" %>
+  <br>
   <%= f.text_field :img_url %>
   <br>
   <br>
   <%= f.label :cuisine %>
+  <br>
   <%= f.text_field :cuisine %>
   <br>
   <br>
   <%= f.label :card, "Accepts Cards" %>
+  <br>
   <%= f.text_field :card %>
   <br>
   <br>
   <%= f.label :menu, "Menu Favorites" %>
+  <br>
   <%= f.text_field :menu %>
+  <br>
+  <br>
   <br>
   <br>
   <%= f.submit 'Update', class: "btn btn-info" %>
   <br>
-  <p>OR</p>
+  <br>
 
 <% end %>
-<%= render partial: 'messages/form' %>
+</div>
+<br>
+<div class="text-center">
+
 <%= button_to 'Delete Truck', "/foodtrucks/#{@foodtruck.id}", method: "delete", class: "btn btn-danger" %>
+</div>

@@ -18,14 +18,12 @@ class FoodtrucksController < ApplicationController
 
   def create
     @foodtruck = Foodtruck.create(foodtruck_params)
-
     redirect_to foodtrucks_path
   end
 
   def edit
     @foodtruck = Foodtruck.find(params[:id])
     @message = Message.find_by(foodtruck: params[:id])
-
   end
 
   def update
@@ -33,8 +31,6 @@ class FoodtrucksController < ApplicationController
     @foodtruck.update(foodtruck_params)
 
     redirect_to foodtrucks_path(@foodtruck)
-
-
   end
 
   def destroy

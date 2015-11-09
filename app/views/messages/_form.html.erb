@@ -1,7 +1,8 @@
-<h3>What's New Today?</h3>
+
+<div class="text-center">
 
 <%= form_for [ @foodtruck, @message ] do |f| %>
-  <p>
+  <p class="text-warning">
     <% f.label :body %><br/>
     <%= f.text_area :body %>
   </p>
@@ -9,3 +10,4 @@
     <%= f.submit 'Update', class: "btn btn-info" %>
   </p>
 <% end %>
+</div>

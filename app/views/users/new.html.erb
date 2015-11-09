@@ -1,19 +1,42 @@
+
+<div class="text-center text-info">
+
 <h1>Sign Up</h1>
-<div class="create_new_user">
+
+</div>
+
+<div class="create_new_user text-center">
 
 <%= form_for @user do |f| %>
-    <%= f.label :username, "Username:"%>
+<p class="text-primary">
+
+    <%= f.label :username, "Username"%>
+    <br>
     <%= f.text_field :username%>
+
+</p>
+
+<p class="text-primary">
+
+    <%= f.label :password, "Password"%>
     <br>
-    <br>
-    <%= f.label :password, "Password:"%>
     <%= f.password_field :password%>
+
+</p>
+
+<p class="text-primary">
+
+    <%= f.label :password_confirmation, "Confirm Password"%>
     <br>
-    <br>
-    <%= f.label :password_confirmation, "Confirm Password:"%>
     <%= f.password_field :password_confirmation%>
-    <br>
-    <br>
+
+</p>
+<br>
+<br>
     <%= f.submit%>
+
 <%end%>
+
+</div>
+
 </div>
