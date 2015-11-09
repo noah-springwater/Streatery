@@ -2,36 +2,50 @@
 <h1 class="text-center text-info">s t r [ e a t ] e r y</h1>
 
 <div class="text-center">
-  <br>
-  <br>
+
+      <br>
+      <br>
 
   <div class="text-primary">
 
     <%= form_tag '/sessions', method: :post do %>
+
       <%= label_tag :username %>
-      <br>
+
+        <br>
 
       <%= text_field_tag :username %>
-      <br>
+
+        <br>
+
       <%= label_tag :password %>
-      <br>
+
+        <br>
+
       <%= password_field_tag :password %>
+
         <br>
         <br>
-  </div>
-<div class="text-info">
+
+</div>
+
+    <div class="text-info">
 
       <%= submit_tag "Log In" %>
-</div>
 
-    <% end %>
+    </div>
+
+        <% end %>
+
         <br>
         <br>
 
 
-</div>
+  </div>
+
 
 <div class="text-center text-info">
 
-<%= button_to 'Sign Up', "/users/new", method: "get", class: '' %>
+<%= button_to 'Sign Up', "/users/new", method: "get" %>
+
 </div>
